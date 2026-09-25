@@ -1710,3 +1710,659 @@ img {
     }
 
 }
+
+/* =========================================================
+   INFORMAÇÕES DA ESCOLA
+========================================================= */
+
+.school-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition),
+        border-color var(--transition);
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: rgba(18, 79, 130, .18);
+}
+
+.info-card>span {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--blue-soft);
+    border-radius: 12px;
+
+    font-size: 1.3rem;
+}
+
+.info-card>div {
+    min-width: 0;
+}
+
+.info-card small {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--blue);
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+}
+
+.info-card strong {
+    display: block;
+
+    color: var(--navy);
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+.info-card p {
+    margin-top: 5px;
+
+    color: var(--gray-500);
+    font-size: .78rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .school-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+}
+
+/* =========================================================
+   DADOS DA ESCOLA - COMPLEMENTO
+========================================================= */
+
+.school-data-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 25px;
+}
+
+.school-data-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+
+    transition: transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.school-data-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.school-data-card>span {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--blue-soft);
+    border-radius: 12px;
+
+    font-size: 1.2rem;
+}
+
+.school-data-card small {
+    display: block;
+    margin-bottom: 5px;
+
+    color: var(--blue);
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.school-data-card strong {
+    color: var(--navy);
+    font-size: .88rem;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SITUAÇÃO DA ESCOLA
+========================================================= */
+
+.school-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.school-stat {
+    padding: 25px 15px;
+
+    text-align: center;
+
+    background: var(--navy);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.school-stat strong {
+    display: block;
+
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.school-stat span {
+    color: rgba(255, 255, 255, .75);
+    font-size: .78rem;
+}
+
+
+/* =========================================================
+   BLOCOS EXPANSÍVEIS
+========================================================= */
+
+.school-expand-card {
+    margin-top: 20px;
+
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.school-expand-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 25px;
+}
+
+.school-expand-header h3 {
+    margin-top: 5px;
+
+    color: var(--navy);
+    font-size: 1.2rem;
+}
+
+.school-expand-button {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    border: 0;
+    background: transparent;
+
+    color: var(--blue);
+
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .05em;
+
+    cursor: pointer;
+}
+
+.school-expand-button span {
+    font-size: 1rem;
+
+    transition: transform .25s ease;
+}
+
+.school-expand-button.active span {
+    transform: rotate(90deg);
+}
+
+.school-expand-content {
+    padding: 0 25px 25px;
+}
+
+
+/* =========================================================
+   DISCIPLINAS
+========================================================= */
+
+.disciplines-list {
+    border-top: 1px solid var(--gray-100);
+}
+
+.disciplines-list div {
+    padding: 13px 5px;
+
+    border-bottom: 1px solid var(--gray-100);
+
+    color: var(--gray-700);
+    font-size: .84rem;
+}
+
+.disciplines-list div::first-letter {
+    color: var(--blue);
+}
+
+
+/* =========================================================
+   INFRAESTRUTURA - RESUMO
+========================================================= */
+
+.infra-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    padding: 0 25px 25px;
+}
+
+.infra-item {
+    min-height: 85px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    padding: 15px;
+
+    background: var(--off-white);
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.infra-item span {
+    font-size: 1.3rem;
+}
+
+.infra-item strong {
+    color: var(--gray-700);
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   INFRAESTRUTURA - DETALHES
+========================================================= */
+
+.infra-section {
+    padding-top: 25px;
+    margin-top: 25px;
+
+    border-top: 1px solid var(--gray-100);
+}
+
+.infra-section h4 {
+    margin-bottom: 15px;
+
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+.infra-details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.infra-detail {
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 15px;
+
+    background: var(--off-white);
+    border-radius: 10px;
+
+    color: var(--gray-700);
+    font-size: .75rem;
+    line-height: 1.4;
+}
+
+.infra-detail span {
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.infra-detail.active span {
+    color: var(--blue);
+}
+
+.infra-detail.inactive {
+    opacity: .45;
+}
+
+
+/* =========================================================
+   NÚMEROS
+========================================================= */
+
+.infra-number-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 5px;
+
+    border-bottom: 1px solid var(--gray-100);
+
+    color: var(--gray-700);
+    font-size: .8rem;
+}
+
+.infra-number-row strong {
+    color: var(--navy);
+    font-size: .85rem;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .school-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .school-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .infra-summary,
+    .infra-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .school-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .school-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .school-expand-header {
+        padding: 20px;
+    }
+
+    .school-expand-content {
+        padding: 0 20px 20px;
+    }
+
+    .infra-summary,
+    .infra-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .infra-summary {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .school-stat {
+        padding: 20px 10px;
+    }
+
+    .school-stat strong {
+        font-size: 1.6rem;
+    }
+
+}
+
+/* =========================================================
+   VÍDEO - CONQUISTA DA ESCOLA
+========================================================= */
+
+.school-video-section {
+    padding: 80px 0;
+    background: var(--off-white);
+}
+
+.school-video-section .section-heading {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.school-video-section .section-heading h2 {
+    margin-bottom: 12px;
+}
+
+.school-video-section .section-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.school-video-card {
+    width: min(100%, 520px);
+    margin: 0 auto;
+    padding: 10px;
+
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: 22px;
+
+    box-shadow: 0 18px 45px rgba(7, 26, 51, 0.15);
+
+    overflow: hidden;
+}
+
+/* VÍDEO */
+.school-video-card video {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 15px;
+    background: #000;
+
+    object-fit: contain;
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+.school-video-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 55px rgba(7, 26, 51, 0.20);
+    transition: .3s ease;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    .school-video-section {
+        padding: 60px 0;
+    }
+
+    .school-video-card {
+        width: 100%;
+        padding: 6px;
+        border-radius: 16px;
+    }
+
+    .school-video-card video {
+        border-radius: 11px;
+    }
+
+}
+
+/* =========================================================
+   MÍDIA DOS PROJETOS
+========================================================= */
+
+.activity-card {
+    background: #ffffff;
+    border: 1px solid var(--gray-100);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow-sm);
+}
+
+.activity-info {
+    margin-bottom: 20px;
+}
+
+.activity-info h4 {
+    margin: 8px 0;
+    color: var(--navy);
+    font-size: 1.25rem;
+}
+
+.activity-info p {
+    color: var(--gray-700);
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   VÍDEO
+========================================================= */
+
+.activity-video {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.activity-video video {
+    display: block;
+    width: 100%;
+    max-height: 650px;
+    background: #ffffff;
+    border-radius: 14px;
+}
+
+
+/* =========================================================
+   TÍTULO DAS FOTOS / VÍDEOS
+========================================================= */
+
+.activity-media-title {
+    margin: 28px 0 15px;
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   FOTOS
+========================================================= */
+
+.activity-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.activity-images img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   VÁRIOS VÍDEOS
+========================================================= */
+
+.activity-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.activity-videos video {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .activity-card {
+        padding: 16px;
+    }
+
+    .activity-images {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-images img {
+        height: auto;
+        max-height: 500px;
+    }
+
+    .activity-videos {
+        grid-template-columns: 1fr;
+    }
+
+}
